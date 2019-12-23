@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './search/search'
-import Hero from './displayHero/hero';
+import DisplayHero from './displayHero/displayHero';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
     <div className="App">
       <Search />
-      <Hero />
+      <DisplayHero />
     </div>
   );
 }
