@@ -17,6 +17,7 @@ class Search extends Component {
     render() {
         return (
             <div>
+                <h1>Super Hero Search</h1>
                 <div>
                     <label htmlFor='hero'>Hero Name</label>
                     <input
