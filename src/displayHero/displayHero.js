@@ -1,6 +1,7 @@
 import React from 'react'
 import hero from './tempHeroData';
 import HeroData from './heroData/heroData';
+import style from './displayHero.module.css'
 
 
 const DisplayHero = () => {
@@ -8,7 +9,7 @@ const DisplayHero = () => {
 
     return (
         <div>
-            <div>
+            <div className={style.image}>
                 <img
                     src={ hero.images.lg }
                     alt='spider-man miles morales'

@@ -1,0 +1,6 @@
+.searchHero {
+    display: grid;
+    border: 1px solid red;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import style from './search.module.css';
+import icon from '../icons/superhero.png'
 
 class Search extends Component {
     state = {
@@ -17,21 +19,23 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <h1>Super Hero Search</h1>
-                <div>
-                    <label htmlFor='hero'>Hero Name</label>
-                    <input
-                        id='hero'
-                        name='heroName'
-                        value={ this.state.heroName }
-                        onChange={ this.handleNameInput }
-                    />
-                    <button>Search</button>
+                <div className={ style.searchHero }>
+                    <div>  <img src={ icon } alt='superhero' style={ { height: '30px' } } /></div>
+                    <div>
+                        <input
+                            id='hero'
+                            name='heroName'
+                            value={ this.state.heroName }
+                            onChange={ this.handleNameInput }
+                            placeholder="spiderman"
+                        />
+                    </div>
+                    <div>
+                        <button> Search </button>
+                    </div>
                 </div>
                 <div>
-                    <button>
-                        Random Hero
-                </button>
+                    <button>Random</button>
                 </div>
             </div>
         )
