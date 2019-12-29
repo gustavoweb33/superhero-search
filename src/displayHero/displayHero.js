@@ -9,17 +9,18 @@ const DisplayHero = () => {
 
     return (
         <div>
-            <div className={style.image}>
+            <div className={ style.image }>
                 <img
                     src={ hero.images.lg }
                     alt='spider-man miles morales'
                 />
             </div>
-            {/*use this div as the grid box */}
-            <div>
+            {/*use this div as the grid box */ }
+            <div className={ style.heroData }>
                 <HeroData stats={ powerstats } />
                 <HeroData stats={ appearance } />
-                <HeroData stats={ biography } />
+                <div className={ style.heroBio }> <HeroData stats={ biography } /></div>
+
             </div>
 
         </div>

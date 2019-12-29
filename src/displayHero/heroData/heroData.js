@@ -4,13 +4,13 @@ import style from './heroData.module.css'
 class HeroData extends Component {
     render() {
         const heroDataProps = { ...this.props.stats }
-
         let aliases = [];
         //check if props is the 'aliase' key in the object
         if ( heroDataProps.aliases ) {
             /*make a separate array otherwise when it prints on the screen, it will be one long line instead of seperate entries */
             aliases = [ ...heroDataProps.aliases ];
         }
+        delete heroDataProps.aliases;
 
         return (
 
@@ -30,12 +30,14 @@ class HeroData extends Component {
 
                 } ) }
 
-                <span>ALIASES</span>
-                { aliases.map( ( aliase ) => {
-                    return <div key={ aliase }>
-                        { aliase }
-                    </div>
-                } ) }
+                <span style={ { fontWeight: 'bold' } }>ALIASES: </span>
+                <div style={ { display: 'flex', flexWrap: 'wrap' } }>
+                    { aliases.map( ( aliase ) => {
+                        return <div key={ aliase } style={ { margin: '0px 20px' } }>
+                            { aliase },
+                        </div>
+                    } ) }
+                </div>
             </div>
 
         )
