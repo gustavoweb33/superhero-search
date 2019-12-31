@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './heroData.module.css'
+import Aliases from './aliases';
 
 class HeroData extends Component {
     render() {
@@ -31,13 +32,7 @@ class HeroData extends Component {
                 } ) }
 
                 <span style={ { fontWeight: 'bold' } }>ALIASES: </span>
-                <div style={ { display: 'flex', flexWrap: 'wrap' } }>
-                    { aliases.map( ( aliase ) => {
-                        return <div key={ aliase } style={ { margin: '0px 20px' } }>
-                            { aliase },
-                        </div>
-                    } ) }
-                </div>
+                <Aliases codeNames={ aliases } />
             </div>
 
         )
