@@ -8,10 +8,11 @@ const aliases = ( aliases ) => {
         heroNames = null;
     }
     else {
-        
+        //create a button that will load more name
+        let partialCodeName = codeNames.splice(0, 5)
         heroNames = (
             <div style={ { display: 'flex', flexWrap: 'wrap' } }>
-                { codeNames.map( ( name ) => {
+                { partialCodeName.map( ( name ) => {
                     return <ul key={ name } style={ { margin: '0px 20px' } }>
                         <li>{ name }</li>
                     </ul>

@@ -1,6 +1,26 @@
 .searchHero {
     display: grid;
-    border: 1px solid red;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.3fr 1fr;
+}
+
+.searchHero div {
+    align-self: center;
+}
+
+.icon {
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.icon img {
+    height: 30px;
+}
+
+.searchInput {
+    width: 90%;
+    height: 25px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 18px;
 }

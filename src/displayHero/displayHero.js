@@ -17,9 +17,14 @@ const DisplayHero = () => {
             </div>
             {/*use this div as the grid box */ }
             <div className={ style.heroData }>
-                <HeroData stats={ powerstats } />
+                <div className={style.heroStats}>
+                    <HeroData stats={ powerstats } />
+                </div>
                 <HeroData stats={ appearance } />
-                <div className={ style.heroBio }> <HeroData stats={ biography } /></div>
+                <div
+                    className={ style.heroBio }>
+                    <HeroData stats={ biography } />
+                </div>
 
             </div>
 

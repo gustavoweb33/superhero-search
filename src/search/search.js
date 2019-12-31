@@ -20,14 +20,17 @@ class Search extends Component {
         return (
             <div>
                 <div className={ style.searchHero }>
-                    <div>  <img src={ icon } alt='superhero' style={ { height: '30px' } } /></div>
-                    <div>
+                    <div className={ style.icon }>
+                        <img src={ icon } alt='superhero' />
+                    </div>
+                    <div >
                         <input
                             id='hero'
                             name='heroName'
                             value={ this.state.heroName }
                             onChange={ this.handleNameInput }
-                            placeholder="spiderman"
+                            placeholder="Spiderman"
+                            className={ style.searchInput }
                         />
                     </div>
                     <div>

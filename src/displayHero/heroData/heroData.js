@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import style from './heroData.module.css'
 import Aliases from './aliases';
 
 class HeroData extends Component {
     render() {
+        console.log(this.props)
         const heroDataProps = { ...this.props.stats }
         let aliases = [];
         //check if props is the 'aliase' key in the object
@@ -15,7 +15,7 @@ class HeroData extends Component {
 
         return (
 
-            <div className={ style.border }>
+            <div>
 
                 { Object.keys( heroDataProps ).map( ( key ) => {
                     return <div key={ key }>
