@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Aliases from './aliases';
+import style from './heroData.module.css'
 
 class HeroData extends Component {
     render() {
-        console.log(this.props)
+
         const heroDataProps = { ...this.props.stats }
         let aliases = [];
         //check if props is the 'aliase' key in the object
@@ -20,18 +21,16 @@ class HeroData extends Component {
                 { Object.keys( heroDataProps ).map( ( key ) => {
                     return <div key={ key }>
                         <span
-                            style={ { fontWeight: 'bold', textTransform: 'uppercase' } }>
-                            { key }
+                            className={ style.heroInfoTitles }>
+                            { key }:
                         </span>
-                        :
-                        <span>
-                            { heroDataProps[ key ] }
+                       
+                        <span className={ style.heroInfo }>
+                            { heroDataProps[ key ] } 
                         </span>
                     </div>
 
                 } ) }
-
-                <span style={ { fontWeight: 'bold' } }>ALIASES: </span>
                 <Aliases codeNames={ aliases } />
             </div>
 

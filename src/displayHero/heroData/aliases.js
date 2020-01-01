@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './aliases.module.css';
 
 const aliases = ( aliases ) => {
     const { codeNames } = aliases;
@@ -9,9 +10,12 @@ const aliases = ( aliases ) => {
     }
     else {
         //create a button that will load more name
-        let partialCodeName = codeNames.splice(0, 5)
+        let partialCodeName = codeNames.splice( 0, 5 )
         heroNames = (
             <div style={ { display: 'flex', flexWrap: 'wrap' } }>
+
+                <span className={ style.heroInfoTitles }>Aliases: </span>
+
                 { partialCodeName.map( ( name ) => {
                     return <ul key={ name } style={ { margin: '0px 20px' } }>
                         <li>{ name }</li>

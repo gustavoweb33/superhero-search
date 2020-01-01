@@ -1,3 +1,9 @@
+.background {
+    /* For browsers that do not support gradients */
+    background-color: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-image: radial-gradient(white, gray, black)
+}
+
 .image {
     display: grid;
     justify-content: center;
@@ -16,4 +22,5 @@
 .heroBio {
     grid-column-start: 1;
     grid-column-end: 3;
+    justify-self: center;
 }
