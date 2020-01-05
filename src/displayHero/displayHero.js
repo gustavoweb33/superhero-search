@@ -12,7 +12,10 @@ const DisplayHero = ( props ) => {
 
         return (
             <div>
-                <h1>{ name }</h1>
+                <span className={ style.heroNameFlex }>
+                    <h1 className={ style.heroName }>{ name }</h1>
+                </span>
+                
                 <div className={ style.background }>
                     <div className={ style.image }>
                         <img

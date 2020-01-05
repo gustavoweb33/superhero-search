@@ -4,6 +4,17 @@
     background-image: radial-gradient(white, gray, black)
 }
 
+.heroName {
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.heroNameFlex {
+    display: flex;
+    justify-content: center;
+}
 .image {
     display: grid;
     justify-content: center;
