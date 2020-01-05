@@ -18,15 +18,15 @@ class HeroData extends Component {
 
             <div>
 
-                { Object.keys( heroDataProps ).map( ( key ) => {
-                    return <div key={ key }>
+                { Object.keys( heroDataProps ).map( ( characteristics ) => {
+                    return <div key={ characteristics }>
                         <span
                             className={ style.heroInfoTitles }>
-                            { key }:
+                            { characteristics }:
                         </span>
-                       
+
                         <span className={ style.heroInfo }>
-                            { heroDataProps[ key ] } 
+                            { heroDataProps[ characteristics ] }
                         </span>
                     </div>
 
