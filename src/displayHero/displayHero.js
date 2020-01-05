@@ -1,37 +1,47 @@
 import React from 'react'
-import hero from './tempHeroData';
+// import hero from './tempHeroData'; this is a placeholder. remove later
 import HeroData from './heroData/heroData';
 import style from './displayHero.module.css'
 
 
-const DisplayHero = () => {
-    const { powerstats, appearance, biography } = hero;
+const DisplayHero = ( props ) => {
 
-    return (
-        <div>
-            <div className={style.background}>
-                <div className={ style.image }>
-                    <img
-                        src={ hero.images.lg }
-                        alt='spider-man miles morales'
-                    />
+    const { name, powerstats, appearance, biography, images } = props.fetchedHero;
+
+    if ( Object.entries( props.fetchedHero ).length !== 0 ) {
+
+        return (
+            <div>
+                <h1>{ name }</h1>
+                <div className={ style.background }>
+                    <div className={ style.image }>
+                        <img
+                            src={ images.lg }
+                            alt='spider-man miles morales'
+                        />
+                    </div>
                 </div>
+
+                <div className={ style.heroData }>
+                    <div className={ style.heroStats }>
+                        <HeroData stats={ powerstats } />
+                    </div>
+                    <HeroData stats={ appearance } />
+                    <div
+                        className={ style.heroBio }>
+                        <HeroData stats={ biography } />
+                    </div>
+
+                </div>
+
             </div>
-            {/*use this div as the grid box */ }
-            <div className={ style.heroData }>
-                <div className={ style.heroStats }>
-                    <HeroData stats={ powerstats } />
-                </div>
-                <HeroData stats={ appearance } />
-                <div
-                    className={ style.heroBio }>
-                    <HeroData stats={ biography } />
-                </div>
-
-            </div>
-
-        </div>
-    )
+        )
+    }
+    else {
+        return null
+    };
 }
+
+
 
 export default DisplayHero;
