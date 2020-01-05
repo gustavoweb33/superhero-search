@@ -17,11 +17,19 @@ class App extends Component {
       .catch( ( error ) => console.log( error ) )
   }
 
+  //it takes a few seconds to change the image
+ getRandomHero = () => {
+    fetch( 'http://localhost:3001/' )
+      .then( ( response ) => response.json() )
+      .then( ( data ) => this.setState( { hero: data } ) )
+      .catch( ( error ) => console.log( error ) )
+  }
+
   render() {
-    
+
     return (
       <div className="App">
-        <Search />
+        <Search getRandomHero={ this.getRandomHero } />
         { this.state.hero ? <DisplayHero fetchedHero={ this.state.hero } /> : null }
       </div>
     )

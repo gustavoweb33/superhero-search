@@ -16,6 +16,8 @@ class Search extends Component {
         console.log( this.state.heroName )
     }
 
+
+
     render() {
         return (
             <div>
@@ -38,7 +40,7 @@ class Search extends Component {
                     </div>
                 </div>
                 <div>
-                    <button>Random</button>
+                    <button onClick={ this.props.getRandomHero }>Random</button>
                 </div>
             </div>
         )
