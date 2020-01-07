@@ -4,9 +4,7 @@ import icon from '../icons/superhero.png'
 
 class Search extends Component {
     state = {
-        id: 0,
-        heroName: '',
-        realName: ''
+        heroName: ''
     }
 
     handleNameInput = ( event ) => {
@@ -16,6 +14,10 @@ class Search extends Component {
         console.log( this.state.heroName )
     }
 
+
+    fetchHero = () => {
+        this.props.searchHero( this.state )
+    }
 
 
     render() {
@@ -36,7 +38,7 @@ class Search extends Component {
                         />
                     </div>
                     <div>
-                        <button> Search </button>
+                        <button onClick={ this.fetchHero }> Search </button>
                     </div>
                 </div>
                 <div>

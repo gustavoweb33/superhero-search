@@ -1,5 +1,4 @@
 import React from 'react'
-// import hero from './tempHeroData'; this is a placeholder. remove later
 import HeroData from './heroData/heroData';
 import style from './displayHero.module.css'
 
@@ -8,7 +7,7 @@ const DisplayHero = ( props ) => {
 
     const { name, powerstats, appearance, biography, images } = props.fetchedHero;
 
-    if ( Object.entries( props.fetchedHero ).length !== 0 ) {
+    if ( Object.entries( props.fetchedHero ).length !== 0) {
 
         return (
             <div>
