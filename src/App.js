@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './search/search'
 import DisplayHero from './displayHero/displayHero';
+import NoHeroFound from './displayHero/heroData/heroNotFound';
 
 
 
@@ -33,7 +34,15 @@ class App extends Component {
     console.log( hero )
     fetch( `http://localhost:3001/search?hero=${ hero.heroName }` )
       .then( response => response.json() )
-      .then( data => console.log( data ) )
+      .then( data => {
+        if ( data.id ) {
+          this.setState( { hero: data } )
+        }
+        else {
+          this.setState( { hero: 'Hero not found' } )
+        }
+
+      } )
       .catch( error => console.log( error ) )
   }
 
@@ -41,7 +50,10 @@ class App extends Component {
     return (
       <div>
         <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
-        <DisplayHero fetchedHero={ this.state.hero } />
+        { Object.values( this.state.hero ).length
+          ? <DisplayHero fetchedHero={ this.state.hero } />
+          : <h1>...Loading</h1>
+        }
       </div>
     )
 

@@ -1,25 +1,30 @@
 import React from 'react'
 import HeroData from './heroData/heroData';
 import style from './displayHero.module.css'
+import HeroNotFound from './heroData/heroNotFound';
 
 
 const DisplayHero = ( props ) => {
 
-    const { name, powerstats, appearance, biography, images } = props.fetchedHero;
+    if ( props.fetchedHero === 'Hero not found' ) {
+        return <HeroNotFound />
+    }
 
-    if ( Object.entries( props.fetchedHero ).length !== 0) {
+
+    if ( Object.values( props.fetchedHero !== 0 ) ) {
+        const { name, powerstats, appearance, biography, images } = props.fetchedHero;
 
         return (
             <div>
                 <span className={ style.heroNameFlex }>
                     <h1 className={ style.heroName }>{ name }</h1>
                 </span>
-                
+
                 <div className={ style.background }>
                     <div className={ style.image }>
                         <img
                             src={ images.lg }
-                            alt='spider-man miles morales'
+                            alt={ `${ name }` }
                         />
                     </div>
                 </div>
@@ -40,7 +45,7 @@ const DisplayHero = ( props ) => {
         )
     }
     else {
-        return null
+        return null;
     };
 }
 
