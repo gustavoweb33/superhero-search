@@ -23,7 +23,7 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <div className={ style.searchHero }>
+                <div className={ style.searchHeroGrid }>
                     <div className={ style.icon }>
                         <img src={ icon } alt='superhero' />
                     </div>
@@ -31,19 +31,21 @@ class Search extends Component {
                         <input
                             id='hero'
                             name='heroName'
+                            placeholder="Spiderman"
+                            required
                             value={ this.state.heroName }
                             onChange={ this.handleNameInput }
-                            placeholder="Spiderman"
                             className={ style.searchInput }
                         />
                     </div>
                     <div>
                         <button onClick={ this.fetchHero }> Search </button>
                     </div>
+                    <div>
+                        <button onClick={ this.props.getRandomHero }>Random</button>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={ this.props.getRandomHero }>Random</button>
-                </div>
+
             </div>
         )
 
