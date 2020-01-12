@@ -28,7 +28,7 @@ const DisplayHero = ( props ) => {
                         />
                     </div>
                 </div>
-
+                
                 <div className={ style.heroData }>
                     <div className={ style.heroStats }>
                         <HeroData stats={ powerstats } />
