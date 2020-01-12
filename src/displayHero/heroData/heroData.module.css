@@ -1,5 +1,4 @@
 .heroInfoTitles {
-    font-family: 'Courier Prime', monospace;
     font-weight: bold;
     text-transform: capitalize;
     font-size: 22px;
@@ -7,5 +6,4 @@
 
 .heroInfo {
     font-size: 19px;
-    font-family: 'Courier Prime', monospace;  
 }
