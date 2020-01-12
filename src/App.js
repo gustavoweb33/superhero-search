@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Search from './search/search'
 import DisplayHero from './displayHero/displayHero';
-import NoHeroFound from './displayHero/heroData/heroNotFound';
+import IconsCredit from './iconCredit/iconCredit';
+import style from './app.module.css'
 
 
 
@@ -48,12 +49,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.app}>
         <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
         { Object.values( this.state.hero ).length
           ? <DisplayHero fetchedHero={ this.state.hero } />
           : <h1>...Loading</h1>
         }
+        <IconsCredit/>
       </div>
     )
 
