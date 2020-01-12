@@ -12,12 +12,12 @@ const aliases = ( aliases ) => {
         //create a button that will load more name
         let partialCodeName = codeNames.splice( 0, 5 )
         heroNames = (
-            <div style={ { display: 'flex', flexWrap: 'wrap' } }>
+            <div className={style.container}>
 
                 <span className={ style.heroInfoTitles }>Aliases: </span>
 
                 { partialCodeName.map( ( name ) => {
-                    return <ul key={ name } style={ { margin: '0px 20px' } }>
+                    return <ul key={ name }>
                         <li>{ name }</li>
                     </ul>
                 } ) }

@@ -1,6 +1,15 @@
+.container {
+    display: 'flex';
+    flex-wrap: wrap;
+}
+
 .heroInfoTitles {
-    font-family: 'Courier Prime', monospace;
     font-weight: bold;
     text-transform: capitalize;
     font-size: 22px;
+}
+
+ul {
+    margin: 0px 20px;
+    font-size: 19px;
 }
