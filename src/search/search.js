@@ -22,7 +22,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className={style.searchContainer}>
                 <div className={ style.searchHeroGrid }>
                     <div className={ style.icon }>
                         <img src={ icon } alt='superhero' />

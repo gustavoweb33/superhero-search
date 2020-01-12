@@ -1,7 +1,16 @@
+.searchContainer {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color:#000000c4;
+}
+
 .searchHeroGrid {
     display: grid;
+    height: 50px;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 0.3fr 1fr;
+   
 }
 
 .searchHeroGrid div {
