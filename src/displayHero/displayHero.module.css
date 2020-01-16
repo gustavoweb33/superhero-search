@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 47px;
+    text-align: initial;
 }
 
 .heroStats {
