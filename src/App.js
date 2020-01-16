@@ -49,13 +49,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className={style.app}>
-        <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
-        { Object.values( this.state.hero ).length
-          ? <DisplayHero fetchedHero={ this.state.hero } />
-          : <h1>...Loading</h1>
-        }
-        <IconsCredit/>
+      <div className={style.container}>
+        <div className={ style.app }>
+          <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
+          { Object.values( this.state.hero ).length
+            ? <DisplayHero fetchedHero={ this.state.hero } />
+            : <h1>...Loading</h1>
+          }
+          <IconsCredit />
+        </div>
       </div>
     )
 
