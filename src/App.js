@@ -31,9 +31,8 @@ class App extends Component {
       .catch( error => console.log( error ) )
   }
 
-  getSearchedHero = ( hero ) => {
-    console.log( hero )
-    fetch( `http://localhost:3001/search?hero=${ hero.heroName }` )
+  getSearchedHero = ( heroName ) => {
+    fetch( `http://localhost:3001/search?hero=${ heroName }` )
       .then( response => response.json() )
       .then( data => {
         if ( data.id ) {
@@ -49,7 +48,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className={style.container}>
+      <div className={ style.container }>
         <div className={ style.app }>
           <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
           { Object.values( this.state.hero ).length
