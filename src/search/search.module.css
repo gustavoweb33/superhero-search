@@ -1,5 +1,5 @@
-.searchContainer {
-    position: -webkit-sticky; /* Safari */
+/* .searchContainer {
+    position: -webkit-sticky; 
     position: sticky;
     top: 0;
     background-color:#000000c4;
@@ -32,4 +32,28 @@
     padding-left: 10px;
     border: 1px solid black;
     border-radius: 18px;
+} */
+
+.searchInput {
+    width: 100%;
+}
+
+.searchButton {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.randomButton {
+    margin-top: 10px;
+}
+
+
+.searchIconButton {
+    border:none;
+    background-color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
 }
