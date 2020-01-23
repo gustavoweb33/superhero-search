@@ -23,17 +23,19 @@ const DisplayHero = ( props ) => {
                 <div className={ style.background }>
                     <div className={ style.image }>
                         <img
-                            src={ images.lg }
+                            src={ images.md }
                             alt={ `${ name }` }
                         />
                     </div>
                 </div>
-                
+
                 <div className={ style.heroData }>
                     <div className={ style.heroStats }>
                         <HeroData stats={ powerstats } />
                     </div>
+
                     <HeroData stats={ appearance } />
+
                     <div
                         className={ style.heroBio }>
                         <HeroData stats={ biography } />

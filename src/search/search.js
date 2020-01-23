@@ -37,7 +37,7 @@ class Search extends Component {
                         <button
                             onClick={ this.searchClicked }
                             className={ style.searchIconButton } >
-                            <img src={ SearchIcon } />
+                            <img src={ SearchIcon } alt='search icon' />
                         </button>
                     </div>
 

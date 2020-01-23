@@ -1,13 +1,9 @@
 .container {
     text-align: center;
-    /* background-image: url('./images/blue-abstract-comic.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
 }
 
 .app {
     font-family: 'Courier Prime', monospace;
-    width: 70%;
-    display: inline-block;
+    /* width: 70%;
+    display: inline-block; */
 }

@@ -19,7 +19,7 @@ class HeroData extends Component {
             <div>
 
                 { Object.keys( heroDataProps ).map( ( characteristics ) => {
-                    return <div key={ characteristics }>
+                    return <div key={ characteristics }  className={style.characteristics}>
                         <span
                             className={ style.heroInfoTitles }>
                             { characteristics }:
