@@ -17,7 +17,7 @@ const aliases = ( aliases ) => {
                 <span className={ style.heroInfoTitles }>Aliases: </span>
 
                 { partialCodeName.map( ( name ) => {
-                    return <ul key={ name }>
+                    return <ul key={ name } className={style.aliases}>
                         <li>{ name }</li>
                     </ul>
                 } ) }
