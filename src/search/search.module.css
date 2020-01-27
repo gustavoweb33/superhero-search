@@ -1,14 +1,14 @@
 /* .searchContainer {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
+    position        : -webkit-sticky; 
+    position        : sticky;
+    top             : 0;
     background-color:#000000c4;
 }
 
 .searchHeroGrid {
-    display: grid;
-    height: 50px;
-    grid-template-rows: 1fr;
+    display              : grid;
+    height               : 50px;
+    grid-template-rows   : 1fr;
     grid-template-columns: 1fr 1fr 0.3fr 1fr;
    
 }
@@ -27,33 +27,71 @@
 }
 
 .searchInput {
-    width: 90%;
-    height: 25px;
-    padding-left: 10px;
-    border: 1px solid black;
+    width        : 90%;
+    height       : 25px;
+    padding-left : 10px;
+    border       : 1px solid black;
     border-radius: 18px;
 } */
 
+:root {
+    --button-radius    : 8px;
+    --button-border    : none;
+    --button-height    : 48px;
+    --button-top-margin: 10px;
+    --button-color     : rgb(0, 0, 0);
+}
+
 .searchInput {
-    width: 100%;
+    width: 80%;
 }
 
 .searchButton {
-    width: 50%;
-    margin-top: 10px;
+    width        : 70%;
+    margin-top   : var(--button-top-margin);
+    height       : var(--button-height);
+    border-radius: var(--button-radius);
+    border       : var(--button-border);
+
+    background-color: rgb(135, 206, 250);
+    color           : var(--button-color);
+    font-weight     : bold;
+    font-size       : 16px;
 }
 
+.searchButton:hover,
+.searchButton:active {
+    background-color: rgba(135, 206, 250, 0.6);
+
+}
+
+/* .searchButton:active {
+    background-color: rgba(135, 206, 250, 0.6);
+} */
 .randomButton {
-    margin-top: 10px;
-}
+    width        : 50%;
+    margin-top   : var(--button-top-margin);
+    height       : var(--button-height);
+    border-radius: var(--button-radius);
+    border       : 0.6px solid lightskyblue;
 
+    background-color: white;
+    color           : var(--button-color);
+    font-weight     : 500;
+    font-size       : 14px;
+}
 
 .searchIconButton {
-    border:none;
+    border          : none;
     background-color: white;
 }
 
 .flex {
-    display: flex;
+    display        : flex;
     justify-content: space-evenly;
+}
+
+.interactSearch {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
 }

@@ -29,7 +29,7 @@ class Search extends Component {
             <div className={ style.searchContainer }>
                 <div className={ style.searchHeroGrid }>
 
-                    <div className={style.flex}>
+                    <div className={ style.flex }>
                         <div className={ style.icon }>
                             <img src={ icon } alt='superhero' />
                         </div>
@@ -41,32 +41,39 @@ class Search extends Component {
                         </button>
                     </div>
 
-                    <div>
-                        { this.state.clicked
-                            ? <div>
-                                <input
-                                    id='hero'
-                                    name='heroName'
-                                    placeholder="Spiderman"
-                                    required
-                                    value={ this.state.heroName }
-                                    onChange={ this.handleNameInput }
-                                    className={ style.searchInput }
-                                />
+                    { this.state.clicked
+                        ? <div >
+                            <input
+                                id='hero'
+                                name='heroName'
+                                placeholder="Spiderman"
+                                required
+                                value={ this.state.heroName }
+                                onChange={ this.handleNameInput }
+                                className={ style.searchInput }
+                            />
+                            <div className={ style.interactSearch }>
                                 <div>
-                                    <button onClick={ this.fetchHero } className={ style.searchButton }> Search </button>
+                                    <button
+                                        onClick={ this.props.getRandomHero }
+                                        className={ style.randomButton }>
+                                        Random
+                                    </button>
                                 </div>
                                 <div>
-                                    <button onClick={ this.props.getRandomHero } className={ style.randomButton }>Random</button>
+                                    <button
+                                        onClick={ this.fetchHero }
+                                        className={ style.searchButton }>
+                                        Search
+                                     </button>
                                 </div>
                             </div>
 
-                            : null
-                        }
-                    </div>
+                        </div>
 
+                        : null
+                    }
                 </div>
-
             </div>
         )
 
