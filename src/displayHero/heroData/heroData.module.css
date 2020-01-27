@@ -1,8 +1,8 @@
 .heroInfoTitles {
-    font-weight: bold;
+    font-weight   : bold;
     text-transform: capitalize;
-    font-size: 22px;
-    
+    font-size     : 22px;
+
 }
 
 .heroInfo {
