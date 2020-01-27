@@ -5,25 +5,25 @@
 }
 
 .heroName {
-    font-weight: bold;
+    font-weight   : bold;
     text-transform: capitalize;
-    font-size: 50px;
+    font-size     : 50px;
 }
 
 .heroNameFlex {
-    display: flex;
+    display        : flex;
     justify-content: center;
 }
 .image {
-    display: grid;
+    display        : grid;
     justify-content: center;
 }
 
 .heroData {
-    display: grid;
+    display              : grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 47px;
-    text-align: initial;
+    grid-gap             : 47px;
+    text-align           : initial;
 }
 
 .heroStats {
@@ -32,14 +32,14 @@
 
 .heroBio {
     grid-column-start: 1;
-    grid-column-end: 3;
-    justify-self: center;
+    grid-column-end  : 3;
+    justify-self     : center;
 } */
 
 .heroData {
-    display: grid;
+    display              : grid;
     grid-template-columns: 1fr;
-    grid-gap: 47px;
-    text-align: left;
-    justify-self: center;
+    grid-gap             : 47px;
+    text-align           : left;
+    justify-self         : center;
 }
