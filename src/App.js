@@ -49,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className={ style.container }>
-        <div className={ style.app }>
+        <div className={ style.app }> {/* might be redundent*/}
           <Search getRandomHero={ this.getRandomHero } searchHero={ this.getSearchedHero } />
           { Object.values( this.state.hero ).length
             ? <DisplayHero fetchedHero={ this.state.hero } />

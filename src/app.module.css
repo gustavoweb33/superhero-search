@@ -1,9 +1,13 @@
 .container {
-    text-align: center;
+    text-align : center;
+    font-family: 'Courier Prime', monospace;
 }
 
-.app {
-    font-family: 'Courier Prime', monospace;
-    /* width   : 70%;
-    display    : inline-block; */
+/* for ipad */
+@media only screen and (min-device-width : 768px) {
+    .container {
+      margin: 0 10%;
+    }
+
 }
+
