@@ -1,45 +1,64 @@
-/* .background {
-   
-    background-color: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    background-image: radial-gradient(white, gray, black)
-}
-
-.heroName {
-    font-weight   : bold;
-    text-transform: capitalize;
-    font-size     : 50px;
-}
-
-.heroNameFlex {
-    display        : flex;
-    justify-content: center;
-}
-.image {
-    display        : grid;
-    justify-content: center;
-}
-
-.heroData {
-    display              : grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap             : 47px;
-    text-align           : initial;
-}
-
-.heroStats {
-    justify-self: end;
-}
-
-.heroBio {
-    grid-column-start: 1;
-    grid-column-end  : 3;
-    justify-self     : center;
-} */
-
 .heroData {
     display              : grid;
     grid-template-columns: 1fr;
     grid-gap             : 47px;
     text-align           : left;
     justify-self         : center;
+}
+
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .heroName {
+        font-size: 60px;
+    }
+}
+
+/*ipad pro */
+@media only screen and (min-device-width : 1024px) and (max-device-height: 1366px) {
+    .heroName {
+        font-size: 100px;
+    }
+}
+
+
+@media only screen and (min-width : 1224px) {
+    .background {
+
+        background-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        background-image: radial-gradient(white, gray, black)
+    }
+
+    .heroName {
+        font-weight   : bold;
+        text-transform: capitalize;
+        font-size     : 50px;
+    }
+
+    .heroNameFlex {
+        display        : flex;
+        justify-content: center;
+    }
+
+    .image {
+        display        : grid;
+        justify-content: center;
+    }
+
+    .heroData {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap             : 47px;
+        text-align           : initial;
+    }
+
+    .heroStats {
+        justify-self: end;
+    }
+
+    .heroBio {
+        grid-column-start: 1;
+        grid-column-end  : 3;
+        justify-self     : center;
+    }
+
 }

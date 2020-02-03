@@ -10,7 +10,7 @@
 .heroInfoTitles {
     font-weight     : bold;
     text-transform  : capitalize;
-    font-size       : 22px;
+    font-size       : 30px;
     background-color: lightblue;
 }
 
@@ -44,5 +44,16 @@ ul {
     .heroInfoTitles,
     ul {
         font-size: var(--ipad-font);
+    }
+}
+
+
+@media only screen and (min-width : 1224px) {
+    .heroInfoTitles {
+        font-size: 25px;
+    }
+
+    ul {
+        font-size: 22px;
     }
 }

@@ -35,3 +35,14 @@
         font-size: 40px;
     }
 }
+
+
+@media only screen and (min-width : 1224px) {
+    .heroInfoTitles {
+        font-size: 25px;
+    }
+
+    .heroInfo {
+        font-size: 22px;
+    }
+}
