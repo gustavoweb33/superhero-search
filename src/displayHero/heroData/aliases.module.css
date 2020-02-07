@@ -1,5 +1,5 @@
 :root {
-    --ipad-font: 40px;
+    --ipad-font: 30px;
 }
 
 .container {
@@ -10,7 +10,7 @@
 .heroInfoTitles {
     font-weight     : bold;
     text-transform  : capitalize;
-    font-size       : 30px;
+    font-size       : 22px;
     background-color: lightblue;
 }
 
@@ -44,6 +44,15 @@ ul {
     .heroInfoTitles,
     ul {
         font-size: var(--ipad-font);
+    }
+}
+
+@media only screen and (min-width : 1024px) {
+
+    .heroInfoTitles,
+    .aliases:nth-child(odd),
+    .aliases:nth-child(even) {
+        background-color: white;
     }
 }
 
