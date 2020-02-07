@@ -1,13 +1,14 @@
 .container {
-    text-align : center;
-    font-family: 'Courier Prime', monospace;
+  text-align : center;
+  font-family: 'Courier Prime', monospace;
+   margin: 0 auto;
+   max-width: 1040px;
 }
 
 /* for ipad */
-@media only screen and (min-device-width : 768px) {
-    .container {
-      margin: 0 10%;
-    }
+@media only screen and (min-device-width : 768px)  and (max-device-width : 1024px) {
+  .container {
+    margin: 0 10%;
+  }
 
 }
-
