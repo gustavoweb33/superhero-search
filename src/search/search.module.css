@@ -70,9 +70,6 @@
 
 }
 
-/* .searchButton:active {
-    background-color: rgba(135, 206, 250, 0.6);
-} */
 .randomButton {
     width        : 50%;
     margin-top   : var(--button-top-margin);
@@ -103,14 +100,23 @@
 
 
 /* ipad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 600px)  {
     .searchInput {
         width           : 60%;
         height          : 30px;
-        background-color: lightgray;
-
     }
 }
 
-/*ipad pro */
-@media only screen and (min-device-width : 1024px) and (max-device-height: 1366px) {}
+@media only screen and (min-width: 900px) {
+    .searchButton {
+        width: 150px;
+    }
+
+    .randomButton {
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}
