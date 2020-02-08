@@ -18,6 +18,27 @@
 }
 
 
+@media only screen and (min-width : 900px) {
+
+    .characteristics:nth-child(odd),
+    .characteristics:nth-child(even) {
+        background-color: white;
+    }
+
+}
+
+
+@media only screen and (min-width : 1200px) {
+    .heroInfoTitles {
+        font-size: 25px;
+    }
+
+    .heroInfo {
+        font-size: 22px;
+    }
+}
+
+
 /* ipad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
@@ -33,25 +54,5 @@
     .heroInfoTitles,
     .heroInfo {
         font-size: 40px;
-    }
-}
-
-@media only screen and (min-width : 1024px) {
-
-    .characteristics:nth-child(odd),
-    .characteristics:nth-child(even) {
-        background-color: white;
-    }
-
-}
-
-
-@media only screen and (min-width : 1224px) {
-    .heroInfoTitles {
-        font-size: 25px;
-    }
-
-    .heroInfo {
-        font-size: 22px;
     }
 }

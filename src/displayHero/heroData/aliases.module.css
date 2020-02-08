@@ -29,6 +29,27 @@ ul {
 
 
 
+@media only screen and (min-width : 900px) {
+
+    .heroInfoTitles,
+    .aliases:nth-child(odd),
+    .aliases:nth-child(even) {
+        background-color: white;
+    }
+}
+
+
+@media only screen and (min-width : 1200px) {
+    .heroInfoTitles {
+        font-size: 25px;
+    }
+
+    ul {
+        font-size: 22px;
+    }
+}
+
+
 /* ipad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
@@ -44,25 +65,5 @@ ul {
     .heroInfoTitles,
     ul {
         font-size: var(--ipad-font);
-    }
-}
-
-@media only screen and (min-width : 1024px) {
-
-    .heroInfoTitles,
-    .aliases:nth-child(odd),
-    .aliases:nth-child(even) {
-        background-color: white;
-    }
-}
-
-
-@media only screen and (min-width : 1224px) {
-    .heroInfoTitles {
-        font-size: 25px;
-    }
-
-    ul {
-        font-size: 22px;
     }
 }

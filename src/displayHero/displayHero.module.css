@@ -6,22 +6,8 @@
     justify-self         : center;
 }
 
-/* ipad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .heroName {
-        font-size: 60px;
-    }
-}
 
-/*ipad pro */
-@media only screen and (min-device-width : 1024px) and (max-device-height: 1366px) {
-    .heroName {
-        font-size: 100px;
-    }
-}
-
-
-@media only screen and (min-width : 1224px) {
+@media only screen and (min-width : 1200px) {
     .background {
 
         background-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -62,3 +48,20 @@
     }
 
 }
+
+
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .heroName {
+        font-size: 60px;
+    }
+}
+
+/*ipad pro */
+@media only screen and (min-device-width : 1024px) and (max-device-height: 1366px) {
+    .heroName {
+        font-size: 100px;
+    }
+}
+
+
