@@ -16,7 +16,7 @@ class HeroData extends Component {
 
         return (
 
-            <div>
+            <div className={style.grid}>
 
                 { Object.keys( heroDataProps ).map( ( characteristics ) => {
                     return <div key={ characteristics }  className={style.characteristics}>

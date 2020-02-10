@@ -1,7 +1,15 @@
+.grid {
+
+    display : grid;
+    grid-gap: 10px;
+
+}
+
 .heroInfoTitles {
     font-weight   : bold;
     text-transform: capitalize;
     font-size     : 22px;
+    padding-left  : 4px;
 
 }
 
@@ -9,15 +17,15 @@
     font-size: 19px;
 }
 
+.characteristics {
+    border-radius: 6px;
+}
+
 .characteristics:nth-child(odd) {
     background-color: lightblue;
 }
 
-.characteristics:nth-child(even) {
-    background-color: lightcyan;
-}
-
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 600px) {
 
     .heroInfoTitles,
     .heroInfo {
@@ -25,22 +33,18 @@
     }
 }
 
-@media only screen and (min-width : 900px) {
-
-    .characteristics:nth-child(odd),
-    .characteristics:nth-child(even) {
-        background-color: white;
-    }
-
-}
-
 
 @media only screen and (min-width : 1200px) {
     .heroInfoTitles {
         font-size: 25px;
+
     }
 
     .heroInfo {
         font-size: 22px;
+    }
+
+    .characteristics:nth-child(odd) {
+        background-color: white;
     }
 }
