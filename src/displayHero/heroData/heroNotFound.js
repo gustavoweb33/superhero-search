@@ -9,7 +9,7 @@ const heroNotFound = () => {
             <p>Check your spelling. Heroes with the same name have Roman numbers after their name</p>
             <p>Exaple of heros, Anti-Venom, Batgirl II</p>
             <p>If no matching hero is found. Try the heros real full name</p>
-            <img src={ NotFoundIcon } alt='sad face'/>
+            <img src={ NotFoundIcon } alt='sad face' className={style.notFoundFace}/>
         </div>
             )
         }
