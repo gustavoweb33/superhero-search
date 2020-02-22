@@ -22,14 +22,15 @@
 }
 
 .characteristics:nth-child(odd) {
-    background-color: lightblue;
+    background-color: rgb(255, 237, 239);
 }
+
 
 @media only screen and (min-width : 600px) {
 
     .heroInfoTitles,
     .heroInfo {
-        font-size: 30px;
+        font-size: 22px;
     }
 }
 
@@ -38,10 +39,6 @@
     .heroInfoTitles {
         font-size: 25px;
 
-    }
-
-    .heroInfo {
-        font-size: 22px;
     }
 
     .characteristics:nth-child(odd) {
