@@ -13,12 +13,11 @@ class Search extends Component {
         this.setState( {
             [ event.target.name ]: event.target.value
         } );
-        console.log( this.state.heroName )
     }
 
 
-    fetchHero = () => {
-        this.props.searchHero( this.state.heroName )
+    getSearchedHero = () => {
+        this.props.getSearchedHero( this.state.heroName )
     }
 
     searchClicked = () => {
@@ -62,7 +61,8 @@ class Search extends Component {
                                 </div>
                                 <div>
                                     <button
-                                        onClick={ this.fetchHero }
+                                        disabled={ !this.state.heroName }
+                                        onClick={ this.getSearchedHero }
                                         className={ style.searchButton }>
                                         Search
                                      </button>
