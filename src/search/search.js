@@ -32,7 +32,7 @@ class Search extends Component {
                         <div className={ style.icon }>
                             <img src={ icon } alt='superhero' />
                         </div>
-
+                        {/*loads search input once button is clicked*/ }
                         <button
                             onClick={ this.searchClicked }
                             className={ style.searchIconButton } >
@@ -60,10 +60,15 @@ class Search extends Component {
                                     </button>
                                 </div>
                                 <div>
+                                    {/*button is dissabled until user enters input */ }
                                     <button
                                         disabled={ !this.state.heroName }
                                         onClick={ this.getSearchedHero }
-                                        className={ style.searchButton }>
+                                        className={ style.searchButton }
+                                        style={ !this.state.heroName
+                                            ? { 'cursor': 'not-allowed' }
+                                            : { 'cursor': 'pointer' } }
+                                    >
                                         Search
                                      </button>
                                 </div>
