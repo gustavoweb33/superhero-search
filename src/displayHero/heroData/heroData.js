@@ -7,11 +7,14 @@ class HeroData extends Component {
 
         const heroDataProps = { ...this.props.stats }
         let aliases = [];
-        //check if props is the 'aliase' key in the object
+        
+        //check if props has 'aliase' key in the object, otherwise we get an error. 
         if ( heroDataProps.aliases ) {
-            /*make a separate array otherwise when it prints on the screen, it will be one long line instead of seperate entries */
+            //when it displays on the screen it will be one long line instead of seperate entries.
+            //the new array corrects that issue. 
             aliases = [ ...heroDataProps.aliases ];
         }
+        //delete it so it doesn't get displayed twice.
         delete heroDataProps.aliases;
 
         return (

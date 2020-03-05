@@ -5,12 +5,12 @@ import HeroNotFound from './heroData/heroNotFound';
 
 
 const DisplayHero = ( props ) => {
-
+    //'Hero not found' is the value set in the state when it fails to find a matching hero.
     if ( props.fetchedHero === 'Hero not found' ) {
         return <HeroNotFound />
     }
 
-
+    //Check to ensure we retrived hero data.
     if ( Object.values( props.fetchedHero !== 0 ) ) {
         const { name, powerstats, appearance, biography, images } = props.fetchedHero;
 

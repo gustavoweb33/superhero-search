@@ -9,8 +9,8 @@ const aliases = ( aliases ) => {
         heroNames = null;
     }
     else {
-        //create a button that will load more name
-        let partialCodeName = codeNames.splice( 0, 5 )
+        //Limit the ammount rendered so it doesn't diplay too many names. 
+        let partialCodeName = codeNames.splice( 0, 5 );
         heroNames = (
             <div className={style.container}>
 
